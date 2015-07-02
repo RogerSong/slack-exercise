@@ -16,10 +16,10 @@ $icon = ":muscle:";
 
 // List of exercises
 $exercise = array(
-	"sit ups",
-	"push ups",
-	"squats",
-	"jumping jacks"
+    "sit ups",
+    "push ups",
+    "squats",
+    "jumping jacks"
 );
 
 // Generates a random number between $min_amount and $max_amount

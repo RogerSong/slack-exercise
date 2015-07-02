@@ -19,7 +19,7 @@ $json = json_decode($result);
 foreach($json->members as $members) {
     if ($members->deleted == false)
     {
-    	$users[] = $members->name;
+        $users[] = $members->name;
     }
 }
 
@@ -31,9 +31,9 @@ $payloadText = "NEXT EXERCISE: @" . $randUser . " must do " . $amount . " " . $r
 
 // Packaging data for delivery to Slack
 $data = array(
-    "token"			=>	$token,
+    "token"         =>  $token,
     "channel"       =>  $channel,
-    "username"		=>	$username,
+    "username"      =>  $username,
     "text"          =>  $payloadText,
     "icon_emoji"    =>  $icon
 );
@@ -48,7 +48,7 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 $result = curl_exec($ch);
 curl_close($ch);
 
-echo $payloadText, "<br />";
-echo "Server message: " . $result;
+// Echoing exercise just for validation
+echo $payloadText;
 
 ?>
