@@ -7,6 +7,7 @@
 	{	
 		xmlhttp=new XMLHttpRequest();
 		xmlhttp.open("POST","php/exercise.php",true);
+		xmlhttp.setRequestHeader("X-Requested-With", "XMLHttpRequest");
 		xmlhttp.setRequestHeader("Connection", "close");
 
 		xmlhttp.onreadystatechange=function()
