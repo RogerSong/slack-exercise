@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script>
+	function exercise_bot()
+	{	
+		xmlhttp=new XMLHttpRequest();
+		xmlhttp.open("POST","php/exercise.php",true);
+		xmlhttp.setRequestHeader("Connection", "close");
+
+		xmlhttp.onreadystatechange=function()
+		{
+			if (xmlhttp.readyState==4 && xmlhttp.status==200)
+			{
+			  document.getElementById("result").innerHTML=xmlhttp.responseText;
+			}
+		}
+	  	xmlhttp.send();
+	}
+	</script>
+</head>
+
+<body>
+	<div id="result"></div>
+	<button type="button" onclick="exercise_bot()">Generate exercise</button>
+</body>
+
+</html>
